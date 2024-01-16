@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PT Sans Narrow", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1d9d9;
+  text-align: center;
+}
+
+h1 {
+  color: #71202c;
+  text-align: center;
+  margin: 20px 0 10px 0;
+}
+
+#buscadorUsuarios {
+  color: #71202c;
+  width: 30%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+#buscadorUsuarios:focus {
+  border: 1px solid #d59495;
+  box-shadow: 0 0 5px #d59495;
+}
+
+#listaUsuarios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.tarjetaUsuario {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(113, 32, 44, 0.2);
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tarjetaUsuario:hover {
+  transform: scale(1.05);
+}
+
+.contenedorAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 15px 0 0;
+}
+
+.tarjetaUsuario img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.contenedorInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.tarjetaUsuario h2 {
+  color: #71202c;
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+/*Estilos botones de paginación */
+.contenedor-paginado {
+  margin: 20px 0px;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.paginacion button {
+  padding: 10px;
+  margin: 0 5px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #71202c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.paginacion button:hover {
+  background-color: #d59495;
+}
+
+.paginacion button:disabled {
+  background-color: #d59495;
+  cursor: not-allowed;
+}
+
+/* Estilos para el Modal */
+.contenedorInfo {
+  flex: 1;
+}
+
+.contenedorInfo p {
+  margin-bottom: 8px;
+}
+
+.modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  width: 320px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #71202c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.modal button:hover {
+  background-color: #d59495;
+}
+
+.contenedorFooter {
+  margin-bottom: 15px;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 1024px) {
+  #buscadorUsuarios {
+    width: 80%;
+  }
+
+  .tarjetaUsuario {
+    width: 40%;
+    margin: 8px 0;
+  }
+
+  .contenedor-paginado {
+    margin: 10px 0;
+  }
+
+  .paginacion button {
+    font-size: 0.9rem;
+  }
+
+  .modal {
+    padding: 10px;
+  }
+
+  .modal-content {
+    width: 290px;
+  }
+
+  .modal-content div .modal-img {
+    width: 80px;
+  }
+
+  .contenedorInfo p {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .tarjetaUsuario {
+    width: 80%;
+    margin: 8px;
+  }
+
+  .modal {
+    padding: 8px;
+  }
+
+  .modal-content {
+    width: 250px;
+  }
+
+  .contenedorInfo p {
+    margin-bottom: 4px;
+  }
+}
