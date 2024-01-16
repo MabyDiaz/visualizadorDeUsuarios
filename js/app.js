@@ -182,7 +182,7 @@ const abrirModal = (usuario, fechaNacimiento) => {
   } - ${fechaNacimiento.getFullYear()}`;
 
   contenedorInfoModal.innerHTML = `
-      <h2 style="color: #71202c; margin: 10px 0px; text-align: center; background-color: #cfa3a4; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;">${
+      <h2 style="color: #71202c; margin: 10px 0px; text-align: center; background-color: #d59495; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;">${
         usuario.name.first
       } ${usuario.name.last}</h2>
       <p><strong>Género:</strong> ${
